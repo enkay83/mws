@@ -1,0 +1,34 @@
+{
+  "name": "enkay/mws",
+  "description": "Amazon Marketplace Web Service libraries",
+  "minimum-stability": "dev",
+  "license": "MIT License",
+  "authors": [
+    {
+      "name": "Amazon.com, Inc.",
+      "homepage": "https://developer.amazonservices.de/"
+    },
+    {
+      "name": "Nikolaos Kostopoulos",
+      "email": "nikostopoulos83@gmail.com"
+    }
+  ],
+  "include-path": [
+    "src/"
+  ],
+  "autoload": {
+    "psr-0": {
+      "FBAInboundServiceMWS": "src/",
+      "FBAInventoryServiceMWS": "src/",
+      "FBAOutboundServiceMWS": "src/",
+      "MarketplaceWebService": "src/",
+      "MarketplaceWebServiceOrders": "src/",
+      "MarketplaceWebServiceProducts": "src/",
+      "MarketplaceWebServiceSellers": "src/",
+      "MWSFinancesService": "src/",
+      "MWSMerchantFulfillmentService": "src/",
+      "MWSRecommendationsSectionService": "src/",
+      "MWSSubscriptionsService": "src/"
+    }
+  }
+}
