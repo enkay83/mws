@@ -1048,7 +1048,7 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
     return array (
       CURLOPT_POST => true,
       CURLOPT_USERAGENT => $this->config['UserAgent'],
-      CURLOPT_VERBOSE => true,
+      CURLOPT_VERBOSE => false,
       CURLOPT_HEADERFUNCTION => array ($this, 'headerCallback'),
       CURLOPT_RETURNTRANSFER => true,
       CURLOPT_SSL_VERIFYPEER => true,
@@ -1100,6 +1100,10 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
       $header[] = 'Transfer-Encoding: chunked';
       
       $curlOptions[CURLOPT_HTTPHEADER] = array_merge($header, $converted[CONVERTED_HEADERS_KEY]);
+
+      if(isset($this->config['CURLOPT_VERBOSE'])){
+        $curlOptions[CURLOPT_VERBOSE] = $this->config['CURLOPT_VERBOSE'];
+      }
 
       rewind($streamHandle);
       $curlOptions[CURLOPT_INFILE] = $streamHandle;
