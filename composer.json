@@ -2,7 +2,7 @@
   "name": "enkay/mws",
   "description": "Amazon Marketplace Web Service libraries",
   "minimum-stability": "dev",
-  "license": "MIT License",
+  "license": "Apache 2.0",
   "authors": [
     {
       "name": "Amazon.com, Inc.",
